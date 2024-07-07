@@ -63,7 +63,7 @@ fun WorkspaceScreen(viewModel: DatasetViewModel, modifier: Modifier = Modifier) 
                 Text(
                     "Your Work",
                     style = MaterialTheme.typography.headlineSmall.copy(
-                        fontSize = 30.sp, // Sesuaikan ukuran font untuk mobile
+                        fontSize = 30.sp, 
                         fontFamily = ab,
                         color = Color(0xFF151101)
                     )
@@ -71,7 +71,7 @@ fun WorkspaceScreen(viewModel: DatasetViewModel, modifier: Modifier = Modifier) 
                 Text(
                     "This is a private view of your content, to see what others see, visit your profile",
                     style = MaterialTheme.typography.bodyLarge.copy(
-                        fontSize = 14.sp, // Sesuaikan ukuran font untuk mobile
+                        fontSize = 14.sp,
                         fontFamily = arialce,
                         color = Color(0xFF151101)
                     )
@@ -85,7 +85,7 @@ fun WorkspaceScreen(viewModel: DatasetViewModel, modifier: Modifier = Modifier) 
                     Icon(
                         painter = painterResource(id = R.drawable.add),
                         contentDescription = null,
-                        modifier = Modifier.size(16.dp) // Sesuaikan ukuran ikon untuk mobile
+                        modifier = Modifier.size(16.dp) 
                     )
                     Spacer(modifier = Modifier.width(4.dp))
                     Text("Create Dataset")
@@ -104,7 +104,7 @@ fun WorkspaceScreen(viewModel: DatasetViewModel, modifier: Modifier = Modifier) 
                             onRemoveClick = {
                                 viewModel.deleteDataset(dataset)
                             },
-                            fontFamily = ab // Pastikan judul menggunakan font ab
+                            fontFamily = ab 
                         )
                     }
                 }
@@ -123,7 +123,7 @@ fun DatasetItem(
     Row(
         modifier = Modifier
             .fillMaxWidth()
-            .padding(vertical = 4.dp) // Sesuaikan padding untuk mobile
+            .padding(vertical = 4.dp) 
             .clickable { onEditClick() },
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -134,7 +134,7 @@ fun DatasetItem(
         Image(
             painter = painter,
             contentDescription = null,
-            modifier = Modifier.size(48.dp), // Sesuaikan ukuran gambar untuk mobile
+            modifier = Modifier.size(48.dp), 
             contentScale = ContentScale.Crop
         )
         Spacer(modifier = Modifier.width(8.dp))
@@ -142,7 +142,7 @@ fun DatasetItem(
             Text(
                 dataset.title,
                 style = MaterialTheme.typography.bodyLarge.copy(
-                    fontSize = 18.sp, // Sesuaikan ukuran font untuk mobile
+                    fontSize = 18.sp,
                     fontFamily = fontFamily,
                     color = Color(0xFF151101)
                 )
@@ -150,7 +150,7 @@ fun DatasetItem(
             Text(
                 dataset.subtitle,
                 style = MaterialTheme.typography.bodyMedium.copy(
-                    fontSize = 14.sp, // Sesuaikan ukuran font untuk mobile
+                    fontSize = 14.sp, 
                     fontFamily = fontFamily,
                     color = Color(0xFF151101)
                 )
@@ -169,24 +169,24 @@ fun DatasetItem(
                 Icon(
                     painter = painterResource(id = R.drawable.edit),
                     contentDescription = null,
-                    modifier = Modifier.size(14.dp) // Sesuaikan ukuran ikon untuk mobile
+                    modifier = Modifier.size(14.dp) 
                 )
                 Spacer(modifier = Modifier.width(2.dp))
-                Text("Edit", fontSize = 12.sp) // Sesuaikan ukuran teks untuk mobile
+                Text("Edit", fontSize = 12.sp) 
             }
             Spacer(modifier = Modifier.height(4.dp))
             Button(
                 onClick = { onRemoveClick() },
                 colors = ButtonDefaults.buttonColors(containerColor = Color(0xFF412E28)),
-                modifier = Modifier.width(110.dp).height(36.dp) // Atur ukuran tombol
+                modifier = Modifier.width(110.dp).height(36.dp) 
             ) {
                 Icon(
                     painter = painterResource(id = R.drawable.delete),
                     contentDescription = null,
-                    modifier = Modifier.size(14.dp) // Sesuaikan ukuran ikon untuk mobile
+                    modifier = Modifier.size(14.dp) 
                 )
                 Spacer(modifier = Modifier.width(2.dp))
-                Text("Remove", fontSize = 12.sp) // Sesuaikan ukuran teks untuk mobile
+                Text("Remove", fontSize = 12.sp) 
             }
         }
     }
